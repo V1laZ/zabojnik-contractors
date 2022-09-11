@@ -1,18 +1,68 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div v-on:scroll="scrollHandle" id="scroller" class="parallax">
+        <Header class="parallax__layer container parallax__layer--back" :btnIsVisible=btnIsVisible />
+        <div class="container parallax__layer parallax__layer--base">
+          <MainBody :btnIsVisible=btnIsVisible />
+        </div>
+    </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Header from '@/components/Header.vue';
+import MainBody from '@/components/MainBody.vue';
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    Header,
+    MainBody,
+  },
+  methods: {
+    scrollHandle() {
+      // console.log(this.scroller.scrollTop)
+      if (this.scroller.scrollTop >= 200) {
+        this.btnIsVisible = false
+      }
+      else {
+        this.btnIsVisible = true
+      }
+      
+    }
+  },
+  data() {
+    return {
+      scroller: Object(),
+      btnIsVisible: true
+    }
+  },
+  mounted() {
+    this.scroller = document.getElementById('scroller')
   }
 }
 </script>
+
+<style scoped>
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth !important;
+  overflow-y: auto;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__layer--base {
+  margin-top: 400px;
+  background-color: rgb(38, 38, 38);
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-2px) scale(3);
+}
+
+</style>
