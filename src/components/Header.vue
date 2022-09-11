@@ -3,7 +3,7 @@
         <div>
             <h1>Zábojník</h1>
             <h1>Contractors</h1>
-            <h1>s.r.o.</h1>
+            <h1>s.r.o</h1>
         </div>
         <Transition>
             <Btn v-if=btnIsVisible text="E-shop" class="mt-4" />
