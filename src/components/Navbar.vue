@@ -13,11 +13,11 @@
             <li class="nav-item">
             <a class="nav-link text-light d-inline" style="padding: 1px; padding-bottom: 4px;" href="#sluzby">Služby</a>
             <Transition>
-                <p v-if="!btnIsVisible" class="d-inline">|</p>
+                <p v-if="!btnIsVisible" class="d-none d-sm-inline">|</p>
             </Transition>
             </li>
             <Transition>
-                <li v-if="!btnIsVisible" class="nav-item">
+                <li v-if="!btnIsVisible" class="nav-item d-none d-sm-block">
                 <a class="nav-link text-light d-inline" style="padding: 1px; padding-bottom: 4px;" href="#">E-Shop</a>
                 </li>
             </Transition>
@@ -86,6 +86,12 @@ p {
     margin-left: 4px;
     margin-right: 4px;
     font-size: 20px;
+}
+
+@media only screen and (max-width: 576px) {
+    p, a {
+        font-size: 18px;
+    }
 }
 
 .navbar {
