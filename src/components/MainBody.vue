@@ -1,8 +1,6 @@
 <template>
     <div class="ps-1 text-light main-bg">
-        <Navbar class="d-none d-sm-block" :btnIsVisible=btnIsVisible />
-        <br>
-        <br>
+        <Navbar class="mb-4" :btnIsVisible=btnIsVisible />
         <h1 class="text-light">Co děláme</h1>
         <div class="container" >
             <MainBodyRow id="zahrady" @visible="playTitleAnim" animation="fadeInLeft">
@@ -80,7 +78,7 @@
                     <img class="img-fluid rounded" src="@/assets/kaceni.png" alt="">
                 </div>
             </MainBodyRow>
-            <Footer />
+            <Footer jmeno="V Zábojník" email="v.zabojnik@centrum.cz" tel="602 781 751" />
         </div>
     </div>
 </template>

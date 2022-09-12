@@ -19,7 +19,6 @@ export default {
   },
   methods: {
     scrollHandle() {
-      // console.log(this.scroller.scrollTop)
       if (this.scroller.scrollTop >= 200) {
         this.btnIsVisible = false
       }

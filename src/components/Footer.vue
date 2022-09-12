@@ -6,9 +6,9 @@
             <div class="col">
                 <div class="ms-5">
                     <h2 class="text-light">Kontaktujte nás</h2>
-                    <p class="text-light mb-1 ms-1">Jmeno Prijmeni</p>
-                    <p class="text-light mb-1 ms-1">email</p>
-                    <p class="text-light mb-1 ms-1">tel</p>
+                    <p class="text-light mb-1 ms-1">{{ jmeno }}</p>
+                    <p class="text-light mb-1 ms-1">{{ email }}</p>
+                    <p class="text-light mb-1 ms-1">{{ tel }}</p>
                 </div>
             </div>
             <div class="col d-flex justify-content-center">
@@ -33,9 +33,9 @@
                 <div class="d-flex justify-content-center pt-3">
                     <div>
                         <h2 class="text-light">Kontaktujte nás</h2>
-                        <p class="text-light text-center m-1">Jmeno Prijmeni</p>
-                        <p class="text-light text-center m-1">email</p>
-                        <p class="text-light text-center m-1">tel</p>
+                        <p class="text-light text-center m-1">{{ jmeno }}</p>
+                        <p class="text-light text-center m-1">{{ email }}</p>
+                        <p class="text-light text-center m-1">{{ tel }}</p>
                     </div>
                 </div>
 
@@ -62,7 +62,12 @@ import Logo from './Logo.vue';
 import Btn from './Btn.vue';
 export default {
     name: "FooterComponent",
-    components: { Logo, Btn }
+    components: { Logo, Btn },
+    props: {
+        jmeno: String,
+        email: String,
+        tel: String
+    }
 }
 </script>
 
