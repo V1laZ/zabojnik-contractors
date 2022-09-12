@@ -1,6 +1,6 @@
 <template>
     <div class="ps-1 text-light main-bg">
-        <Navbar :btnIsVisible=btnIsVisible />
+        <Navbar class="d-none d-sm-block" :btnIsVisible=btnIsVisible />
         <br>
         <br>
         <h1 class="text-light">Co děláme</h1>
@@ -20,7 +20,7 @@
                         <li>nabídky pro výběrové řízení včetně jeho organizace</li>
                     </ul>
                 </div>
-                <div class="col">
+                <div class="col d-none d-sm-block">
                     <img class="img-fluid rounded" src="@/assets/realizace_zahrad.jpg" alt="">
                 </div>
             </MainBodyRow>
@@ -33,7 +33,7 @@
                         <li>poradenství v oboru</li>
                     </ul>
                 </div>
-                <div class="col order-1">
+                <div class="col order-1 d-none d-sm-block">
                     <img class="img-fluid rounded" src="@/assets/travnik.png" alt="">
                 </div>
             </MainBodyRow>
@@ -48,7 +48,7 @@
                         <li>tvarované dřeviny (buxus)</li>
                     </ul>
                 </div>
-                <div class="col">
+                <div class="col d-none d-sm-block">
                     <img class="img-fluid rounded" src="@/assets/rost_mat.png" alt="">
                 </div>
             </MainBodyRow>
@@ -64,7 +64,7 @@
                         <li>geotextilie, tkaniny příze, vázací pásky, agrotextilie, motouzy, pytle, příze, kokosové rohože</li>
                     </ul>
                 </div>
-                <div class="col order-1">
+                <div class="col order-1 d-none d-sm-block">
                     <img class="img-fluid rounded" src="@/assets/kamennaDrt.png" alt="">
                 </div>
             </MainBodyRow>
@@ -76,10 +76,11 @@
                         <li>kácení stromů</li>
                     </ul>
                 </div>
-                <div class="col">
+                <div class="col d-none d-sm-block">
                     <img class="img-fluid rounded" src="@/assets/kaceni.png" alt="">
                 </div>
             </MainBodyRow>
+            <Footer />
         </div>
     </div>
 </template>
@@ -87,9 +88,10 @@
 <script>
 import MainBodyRow from './MainBodyRow.vue';
 import Navbar from './Navbar.vue';
+import Footer from './Footer.vue';
 export default {
     name: "MainBodyComponent",
-    components: { MainBodyRow, MainBodyRow, MainBodyRow, MainBodyRow, MainBodyRow, Navbar },
+    components: { MainBodyRow, MainBodyRow, MainBodyRow, MainBodyRow, MainBodyRow, Navbar, Footer },
     props: {
         btnIsVisible: Boolean
     },
