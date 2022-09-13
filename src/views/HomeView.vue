@@ -3,7 +3,7 @@
         <Header class="container" :class="{'parallax__layer parallax__layer--back': !isMobile, '': isMobile}" :btnIsVisible=btnIsVisible />
         <div class="container" :class="{'parallax__layer parallax__layer--base': !isMobile, '': isMobile}" >
           <MainBody :btnIsVisible=btnIsVisible />
-          <Footer class="d-none d-sm-block" jmeno="V Zábojník" email="v.zabojnik@centrum.cz" tel="602 781 751" />
+          <Footer class="d-none d-sm-block" jmeno="Vítězslav Zábojník" email="v.zabojnik@centrum.cz" tel="602 781 751" />
         </div>
     </div>
 </template>
